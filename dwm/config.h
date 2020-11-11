@@ -17,8 +17,8 @@ static const unsigned int baralpha = 0xe6;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { "#FFFFFF", "#000000", col_gray2 },
-    [SchemeSel]  = { "#FF0000", "#000000", col_cyan  },
+    [SchemeNorm] = { "#FFFFFF", "#000000", "#FFFFFF" },
+    [SchemeSel]  = { "#FF0000", "#000000", "#FF0000" },
 };
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border     */
@@ -43,7 +43,6 @@ static const Rule rules[] = {
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-
 
 #define L_WIDTH(X)                ((X)->w + 2 * (X)->bw + 2 * gappx)
 #define L_HEIGHT(X)               ((X)->h + 2 * (X)->bw + 2 * gappx)
@@ -465,7 +464,7 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
     /* click                event mask      button          function        argument */
-    { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
+    { ClkLtSymbol,          0,              Button1,        cyclelayout,    {.i = -1} },
     { ClkLtSymbol,          0,              Button3,        cyclelayout,    {.i = +1} },
     { ClkWinTitle,          0,              Button2,        zoom,           {0} },
     { ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
