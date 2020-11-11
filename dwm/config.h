@@ -410,10 +410,9 @@ static const char *vol_up[]   = { "pulsemixer", "--change-volume", "+10", NULL }
 static const char *vol_down[] = { "pulsemixer", "--change-volume", "-10", NULL };
 static const char *vol_mute[] = { "pulsemixer", "--toggle-mute",          NULL };
 
-static const char *music_toggle[] = { "music", "toggle", NULL };
-static const char *music_next[]   = { "music", "next",   NULL };
-static const char *music_prev[]   = { "music", "prev",   NULL };
-static const char *music_switch[] = { "music", "switch", NULL };
+static const char *music_toggle[] = { "mpc", "toggle", NULL };
+static const char *music_next[]   = { "mpc", "next",   NULL };
+static const char *music_prev[]   = { "mpc", "prev",   NULL };
 
 static Key keys[] = {
     /* modifier                     key              function        argument */
@@ -422,7 +421,6 @@ static Key keys[] = {
     { MODKEY,                       XK_m,            spawn,          {.v = vol_mute } },
     { MODKEY,                       XK_comma,        spawn,          {.v = vol_down } },
     { MODKEY,                       XK_period,       spawn,          {.v = vol_up } },
-    { MODKEY|ShiftMask,             XK_n,            spawn,          {.v = music_switch } },
     { MODKEY|ShiftMask,             XK_m,            spawn,          {.v = music_toggle } },
     { MODKEY|ShiftMask,             XK_comma,        spawn,          {.v = music_prev } },
     { MODKEY|ShiftMask,             XK_period,       spawn,          {.v = music_next } },
@@ -468,7 +466,7 @@ static Key keys[] = {
 static Button buttons[] = {
     /* click                event mask      button          function        argument */
     { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-    { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+    { ClkLtSymbol,          0,              Button3,        cyclelayout,    {.i = +1} },
     { ClkWinTitle,          0,              Button2,        zoom,           {0} },
     { ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
     { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
