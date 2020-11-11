@@ -68,6 +68,6 @@ static const struct arg args[] = {
     { battery_perc,       "%s%% ", "BAT0" },
     { battery_remaining,  "%s ",   "BAT0" },
 #endif
-    { run_command,        "%s%% ", "[ \"$(pulsemixer --get-mute)\" = '0' ] &&  pulsemixer --get-volume | cut -d ' ' -f 1" },
+    { run_command,        "%s ",   "[ \"$(pulsemixer --get-mute)\" = '0' ] &&  pulsemixer --get-volume | awk '{print $1\"%\"}' || echo mute" },
 	{ datetime,           "%s",    "%D %T" },
 };
