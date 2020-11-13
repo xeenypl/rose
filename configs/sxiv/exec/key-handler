@@ -3,22 +3,21 @@
 walloptions="--zoom"
 
 case "$1" in
-  "C-w")
-    while read file; do
-      cp "$file" ~/.config/wallpaper
-      xwallpaper --zoom "$file"
-    done
-    ;;
-  "C-s")
-    NAME="$(echo | rofi -dmenu)"
-    [ -e "$NAME" ] || mkdir "$NAME"
-    while read file; do
-      mv "$file" "$NAME"
-    done
-    ;;
-  "C-d")
-    while read file; do
-      rm "$file"
-    done
-    ;;
+    "C-w")
+        while read file; do
+            cp "$file" ~/.config/wallpaper
+            feh --bg-fill ~/.config/wallpaper
+        done
+        ;;
+    "W")
+        while read file; do
+            cp "$file" ~/.config/wallpaper
+            feh --bg-fill --no-xinerama "$file"
+        done
+        ;;
+    "C-d")
+        while read file; do
+            rm "$file"
+        done
+        ;;
 esac
