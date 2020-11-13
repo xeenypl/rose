@@ -388,6 +388,9 @@ movestack(const Arg *arg) {
     }
 }
 
+void togglefullscr(const Arg *arg) {
+  if(selmon->sel) setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
+}
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -436,6 +439,7 @@ static Key keys[] = {
     { MODKEY,                       XK_d,            killclient,     {0} },
     //{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
     { MODKEY,                       XK_f,            zoom,           {0} },
+    { MODKEY|ShiftMask,             XK_f,            togglefullscr,  {0} },
     { MODKEY,                       XK_s,            view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_s,            tag,            {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_space,        togglefloating, {0} },
