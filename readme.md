@@ -1,18 +1,18 @@
 # Rose configs (My yet anther configuration)
 
 # softwhere
-- dwm
-    - alpha
-    - fullgaps
-    - pertag
-    - cyclelayout
-    - movestack
-- mpd/ncmpcpp
-- mpv
-- fish
-- picom
-- qutebrowser
-- zathra
-- nnn
-- alacritty
-- neovim
+- [dwm](https://dwm.suckless.org/)
+- [mpd](https://github.com/MusicPlayerDaemon/MPD)
+- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
+- [mpv](https://github.com/mpv-player/mpv)
+- [sxiv](https://github.com/muennich/sxiv)
+- [dmenu](https://tools.suckless.org/dmenu/)
+- [fish](https://github.com/fish-shell/fish-shell)
+- [picom](https://github.com/yshui/picom)
+- [qutebrowser](https://github.com/qutebrowser/qutebrowser)
+- [tiramisu](https://github.com/Sweets/tiramisu)
+- [herbe](https://github.com/dudik/herbe)
+- [zathra](https://pwmt.org/projects/zathura/)
+- [nnn](https://github.com/jarun/nnn)
+- [alacritty](https://github.com/alacritty/alacritty)
+- [neovim](https://github.com/neovim/neovim/)
