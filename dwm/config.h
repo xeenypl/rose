@@ -412,9 +412,9 @@ static const char *vol_up[]   = { "pulsemixer", "--change-volume", "+10", NULL }
 static const char *vol_down[] = { "pulsemixer", "--change-volume", "-10", NULL };
 static const char *vol_mute[] = { "pulsemixer", "--toggle-mute",          NULL };
 
-static const char *music_toggle[] = { "mpc", "toggle", NULL };
-static const char *music_next[]   = { "mpc", "next",   NULL };
-static const char *music_prev[]   = { "mpc", "prev",   NULL };
+static const char *music_toggle[] = { "cmus-remote", "-u", NULL };
+static const char *music_next[]   = { "cmus-remote", "-n",   NULL };
+static const char *music_prev[]   = { "cmus-remote", "-r",   NULL };
 
 static Key keys[] = {
     /* modifier                     key              function        argument */
