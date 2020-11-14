@@ -406,7 +406,7 @@ void togglefullscr(const Arg *arg) {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static const char *vol_up[]   = { "pulsemixer", "--change-volume", "+10", NULL };
 static const char *vol_down[] = { "pulsemixer", "--change-volume", "-10", NULL };
@@ -438,8 +438,8 @@ static Key keys[] = {
     { MODKEY,                       XK_Tab,          view,           {0} },
     { MODKEY,                       XK_d,            killclient,     {0} },
     //{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-    { MODKEY,                       XK_f,            zoom,           {0} },
-    { MODKEY|ShiftMask,             XK_f,            togglefullscr,  {0} },
+    { MODKEY|ShiftMask,             XK_f,            zoom,           {0} },
+    { MODKEY,                       XK_f,            togglefullscr,  {0} },
     { MODKEY,                       XK_s,            view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_s,            tag,            {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_space,        togglefloating, {0} },
