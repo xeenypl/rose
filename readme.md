@@ -13,5 +13,5 @@
 - [herbe](https://github.com/dudik/herbe)
 - [zathra](https://pwmt.org/projects/zathura/)
 - [nnn](https://github.com/jarun/nnn)
-- [alacritty](https://github.com/alacritty/alacritty)
+- [st](https://st.suckless.org)
 - [neovim](https://github.com/neovim/neovim/)
