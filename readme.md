@@ -2,8 +2,7 @@
 
 # softwhere
 - [dwm](https://dwm.suckless.org/)
-- [mpd](https://github.com/MusicPlayerDaemon/MPD)
-- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
+- [cmus](https://github.com/cmus/cmus)
 - [mpv](https://github.com/mpv-player/mpv)
 - [sxiv](https://github.com/muennich/sxiv)
 - [dmenu](https://tools.suckless.org/dmenu/)
