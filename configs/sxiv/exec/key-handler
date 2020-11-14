@@ -6,13 +6,7 @@ case "$1" in
     "C-w")
         while read file; do
             cp "$file" ~/.config/wallpaper
-            feh --bg-fill ~/.config/wallpaper
-        done
-        ;;
-    "W")
-        while read file; do
-            cp "$file" ~/.config/wallpaper
-            feh --bg-fill --no-xinerama "$file"
+            xwallpaper --zoom ~/.config/wallpaper
         done
         ;;
     "C-d")
