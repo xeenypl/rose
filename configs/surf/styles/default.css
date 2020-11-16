@@ -1,0 +1,26 @@
+* {
+    border-color: #fff !important;
+}
+h1,h2,h3,h4,h5,h6 {
+	background-color: #000 !important;
+	color: #F00 !important;
+}
+textarea,input,pre,div,body,td,tr,p,table,th,td {
+	background-color: #000 !important;
+	background-image: none !important;
+	color: #FFF !important;
+}
+a:active, a:link {
+    background-color: #000 !important;
+    color: #F00 !important;
+}
+a:visited {
+	background-color: #000 !important;
+    color: #666 !important;
+}
+a:hover {
+	background-color: #000 !important;
+    color: #FFF !important;
+}
+img       { opacity: .5 !important; }
+img:hover { opacity: 1  !important; }
