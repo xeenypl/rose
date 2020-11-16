@@ -580,7 +580,9 @@ loaduri(Client *c, const Arg *a)
 			apath = (char *)uri;
 		if (!stat(apath, &st) && (path = realpath(apath, NULL))) {
 			url = g_strdup_printf("file://%s", path);
-			free(path);
+			free(path);    
+	    } else if (*uri == ' ') {
+    		url = g_strdup_printf("%s%s", searchengine, uri+1);
 		} else {
 			url = g_strdup_printf("http://%s", uri);
 		}
