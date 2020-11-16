@@ -49,109 +49,117 @@ label toggles between tiled and floating layout.
 .B Button3
 click on a tag label adds/removes all windows with that tag to/from the view.
 .TP
-.B Mod1\-Button1
+.B Mod4\-Button1
 click on a tag label applies that tag to the focused window.
 .TP
-.B Mod1\-Button3
+.B Mod4\-Button3
 click on a tag label adds/removes that tag to/from the focused window.
 .SS Keyboard commands
 .TP
-.B Mod1\-Shift\-Return
+.B Mod4\-Return
 Start
 .BR st(1).
 .TP
-.B Mod1\-p
+.B Mod4\-a
 Spawn
 .BR dmenu(1)
 for launching other programs.
 .TP
-.B Mod1\-,
+.B Mod4\-h
 Focus previous screen, if any.
 .TP
-.B Mod1\-.
+.B Mod4\-l
 Focus next screen, if any.
 .TP
-.B Mod1\-Shift\-,
+.B Mod4\-Shift\-h
 Send focused window to previous screen, if any.
 .TP
-.B Mod1\-Shift\-.
+.B Mod4\-Shift\-l
 Send focused window to next screen, if any.
 .TP
-.B Mod1\-b
+.B Mod4\-b
 Toggles bar on and off.
 .TP
-.B Mod1\-t
-Sets tiled layout.
+.B Mod4\-space
+Sets next layout.
 .TP
-.B Mod1\-f
-Sets floating layout.
+.B Mod4\-Control\-space
+Sets previous layout.
 .TP
-.B Mod1\-m
-Sets monocle layout.
-.TP
-.B Mod1\-space
-Toggles between current and previous layout.
-.TP
-.B Mod1\-j
+.B Mod4\-j
 Focus next window.
 .TP
-.B Mod1\-k
+.B Mod4\-k
 Focus previous window.
 .TP
-.B Mod1\-i
+.B Mod4\-Shift\-j
+Move focus window up in stack.
+.TP
+.B Mod4\-Shift\-k
+Move focus window down in stack.
+.TP
+.B Mod4\-i
 Increase number of windows in master area.
 .TP
-.B Mod1\-d
+.B Mod4\-o
 Decrease number of windows in master area.
 .TP
-.B Mod1\-l
+.B Mod4\-[
 Increase master area size.
 .TP
-.B Mod1\-h
+.B Mod4\-]
 Decrease master area size.
 .TP
-.B Mod1\-Return
+.B Mod4\-Shift\-f
 Zooms/cycles focused window to/from master area (tiled layouts only).
 .TP
-.B Mod1\-Shift\-c
+.B Mod4\-f
+Toggle fulscreen on focused window.
+.TP
+.B Mod4\-d
 Close focused window.
 .TP
-.B Mod1\-Shift\-space
+.B Mod4\-Shift\-space
 Toggle focused window between tiled and floating state.
 .TP
-.B Mod1\-Tab
+.B Mod4\-Tab
 Toggles to the previously selected tags.
 .TP
-.B Mod1\-Shift\-[1..n]
-Apply nth tag to focused window.
-.TP
-.B Mod1\-Shift\-0
+.B Mod4\-Shift\-s
 Apply all tags to focused window.
 .TP
-.B Mod1\-Control\-Shift\-[1..n]
-Add/remove nth tag to/from focused window.
-.TP
-.B Mod1\-[1..n]
-View all windows with nth tag.
-.TP
-.B Mod1\-0
+.B Mod4\-s
 View all windows with any tag.
 .TP
-.B Mod1\-Control\-[1..n]
+.B Mod4\-Shift\-[1..0, -, =]
+Apply nth tag to focused window.
+.TP
+.B Mod4\-Control\-Shift\-[1..0, -, =]
+Add/remove nth tag to/from focused window.
+.TP
+.B Mod4\-[1..0, -, =]
+View all windows with nth tag.
+.TP
+.B Mod4\-Control\-[1..0, -, =]
 Add/remove all windows with nth tag to/from the view.
 .TP
-.B Mod1\--
-Decrease the gaps around windows.
+.B Mod4\-m
+Toggle mute.
 .TP
-.B Mod1\-=
-Increase the gaps around windows.
+.B Mod4\-,
+Increase volume.
 .TP
-.B Mod1\-Shift-=
-Reset the gaps around windows to
-.BR 0 .
+.B Mod4\-.
+Decrease volume.
 .TP
-.B Mod1\-Shift\-q
-Quit dwm.
+.B Mod4\-Shift\-m
+Toggle play in cmus.
+.TP
+.B Mod4\-Shift\-,
+Play previous song in cmus.
+.TP
+.B Mod4\-Shift\-.
+Play next song in cmus.
 .SS Mouse commands
 .TP
 .B Mod1\-Button1
