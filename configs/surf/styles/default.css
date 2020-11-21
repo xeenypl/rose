@@ -31,3 +31,18 @@ img:hover {
     background-color: transparent !important;
     opacity: 1 !important; 
 }
+/* duckduckgo */
+.search__autocomplete, .metabar {
+    background-color: #000 !important;
+}
+.switch__knob {
+    background-color: #FFF !important;
+}
+/* wikipedia */
+#mw-head {
+    background-color: #000 !important;
+}
+/* github */
+.bg-white, .position-sticky {
+    background-color: #000 !important;
+}
