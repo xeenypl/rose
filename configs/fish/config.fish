@@ -45,55 +45,11 @@ function fish_prompt
     end
 end
 
-function hide
-    set WID (xdo id)
-    xdo hide
-    command $argv
-    xdo show $WID
-end
-
-function ls
-    exa $argv
-end
-
-function ll
-    ls -la $argv
-end
-
-function la
-    ls -a $argv
-end
-
-function l
-    ls -l $argv
-end
-
-function :q
-    exit
-end
-
-function :Q  
-    exit
-end
-
-function :wq
-    exit
-end
-
-function :Wq
-    exit
-end
-
-function :WQ 
-    exit
-end
-
-function vf
-    set path (fd | fzf)
-    if [ -n "$path" ]
-        nvim $path
-    end
-end
+function :q;  exit; end
+function :Q;  exit; end
+function :wq; exit; end
+function :Wq; exit; end
+function :WQ; exit; end
 
 function md
     mkdir -p $argv
@@ -126,10 +82,6 @@ end
 
 function tor-ls
     transmission-remote -l
-end
-
-function conf
-    nvim (find ~/.config/ -type f | fzf)
 end
 
 function yt-mp3
