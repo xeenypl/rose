@@ -1,16 +1,8 @@
 call plug#begin('~/.local/vim/plugged')
 "    Plug 'dense-analysis/ale'
-    Plug 'mattn/emmet-vim'
-
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'sheerun/vim-polyglot'
     Plug 'terryma/vim-multiple-cursors'
-
-    Plug 'lark-parser/vim-lark-syntax'
-
 call plug#end()
 
 "set listchars=eol:¬,tab:>·
@@ -30,57 +22,6 @@ set laststatus=0
 
 "match ErrorMsg '\%>80v.\+'
 
-" workman bindings for hjkl as neoi
-" normal mode
-"nnoremap a h
-""nnoremap A 0
-"nnoremap e gj
-"nnoremap E <C-F>
-"nnoremap o gk
-"nnoremap O <C-B>
-"nnoremap i l
-""nnoremap I $
-"nnoremap j o
-"nnoremap J O
-"
-"" visual mode
-"vnoremap a h
-""vnoremap A 0
-"vnoremap e gj
-"vnoremap E <C-F>
-"vnoremap o gk
-"vnoremap O <C-B>
-"vnoremap i l
-""vnoremap I $
-"
-"nnoremap A a
-"nnoremap <C-A> A
-"nnoremap k o
-"nnoremap K O
-"nnoremap I i
-"nnoremap <C-I> i
-"
-"inoremap <C-A> <C-N>
-"inoremap <C-E> <C-P>
-
-" let g:multi_cursor_use_default_mapping=0
-" let g:multi_cursor_start_word_key      = '<C-k>'
-" let g:multi_cursor_select_all_word_key = '<A-n>'
-" let g:multi_cursor_start_key           = 'g<C-n>'
-" let g:multi_cursor_select_all_key      = 'g<A-n>'
-" let g:multi_cursor_next_key            = '<C-k>'
-" let g:multi_cursor_prev_key            = '<C-p>'
-" let g:multi_cursor_skip_key            = '<C-x>'
-" let g:multi_cursor_quit_key            = '<Esc>'
-
-" remaping visual mode to s 
-nnoremap s      v
-nnoremap S      V
-vnoremap s      v
-vnoremap S      V
-nnoremap <C-S> <C-V>
-vnoremap <C-S> <C-V>
-
 command W w
 command Wq wq
 
@@ -94,12 +35,6 @@ nnoremap <C-h>      <C-W><C-H>
 nnoremap <C-j>      <C-W><C-J>
 nnoremap <C-k>      <C-W><C-K>
 nnoremap <C-l>      <C-W><C-L>
-
-nnoremap <C-P>      :Files<CR>
-nnoremap <C-B>      :Buffers<CR>
-"nnoremap <C-S>      :Rg<CR>
-
-let g:fzf_preview_window = 'right:60%'
 
 " let g:ale_completion_enabled = 1
 " let g:ale_fix_on_save = 1
