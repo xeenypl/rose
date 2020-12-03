@@ -1,0 +1,40 @@
+# mocp-theme-solarized by Vitaŭt Bajaryn
+# MOC theme for use with a solarized-dark terminal color scheme
+# based on green theme by Jacek Lehmann
+
+background           = default   default
+frame                = black     default
+window_title         = red       default
+directory            = default   default
+selected_directory   = red       default bold
+playlist             = red       default
+selected_playlist    = default   default bold
+file                 = default   default
+selected_file        = red       default
+marked_file          = default   default bold
+marked_selected_file = red       default bold
+marked_info          = red       default
+marked_selected_info = red       default
+info                 = red       default
+status               = red       default
+title                = red       default
+state                = default   default
+current_time         = default   default
+time_left            = red       default
+total_time           = red       default
+time_total_frames    = red       default bold
+sound_parameters     = red       default
+legend               = default   default
+disabled             = default   default
+enabled              = default   default bold
+empty_mixer_bar      = red       default
+filled_mixer_bar     = black     red
+empty_time_bar       = default   default
+filled_time_bar      = default   red
+entry                = red       default
+entry_title          = red       default
+error                = red       default
+message              = red       default
+plist_time           = default   default bold
+selected_info        = white     default
+
