@@ -409,7 +409,7 @@ static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", "-e", "mocp", NULL };
 
 static const char *vol_up[]   = { "pulsemixer", "--change-volume", "+10", NULL };
 static const char *vol_down[] = { "pulsemixer", "--change-volume", "-10", NULL };
@@ -452,7 +452,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_l,            tagmon,         {.i = +1 } },
     { MODKEY,                       XK_space,        cyclelayout,    {.i = +1 } },
     { MODKEY|ControlMask,           XK_space,        cyclelayout,    {.i = -1 } },
-	{ MODKEY,                       XK_grave,        togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_n,            togglescratch,  {.v = scratchpadcmd } },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
