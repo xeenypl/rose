@@ -415,9 +415,9 @@ static const char *vol_up[]   = { "pulsemixer", "--change-volume", "+10", NULL }
 static const char *vol_down[] = { "pulsemixer", "--change-volume", "-10", NULL };
 static const char *vol_mute[] = { "pulsemixer", "--toggle-mute",          NULL };
 
-static const char *music_toggle[] = { "cmus-remote", "-u", NULL };
-static const char *music_next[]   = { "cmus-remote", "-n",   NULL };
-static const char *music_prev[]   = { "cmus-remote", "-r",   NULL };
+static const char *music_toggle[] = { "mocp", "-G", NULL };
+static const char *music_next[]   = { "mocp", "-f", NULL };
+static const char *music_prev[]   = { "mocp", "-r", NULL };
 
 static Key keys[] = {
     /* modifier                     key              function        argument */
@@ -453,18 +453,18 @@ static Key keys[] = {
     { MODKEY,                       XK_space,        cyclelayout,    {.i = +1 } },
     { MODKEY|ControlMask,           XK_space,        cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_n,            togglescratch,  {.v = scratchpadcmd } },
-    TAGKEYS(                        XK_1,                      0)
-    TAGKEYS(                        XK_2,                      1)
-    TAGKEYS(                        XK_3,                      2)
-    TAGKEYS(                        XK_4,                      3)
-    TAGKEYS(                        XK_5,                      4)
-    TAGKEYS(                        XK_6,                      5)
-    TAGKEYS(                        XK_7,                      6)
-    TAGKEYS(                        XK_8,                      7)
-    TAGKEYS(                        XK_9,                      8)
-    TAGKEYS(                        XK_0,                      9)
-    TAGKEYS(                        XK_minus,                  10)
-    TAGKEYS(                        XK_equal,                  11)
+    TAGKEYS(                        XK_1,                            0)
+    TAGKEYS(                        XK_2,                            1)
+    TAGKEYS(                        XK_3,                            2)
+    TAGKEYS(                        XK_4,                            3)
+    TAGKEYS(                        XK_5,                            4)
+    TAGKEYS(                        XK_6,                            5)
+    TAGKEYS(                        XK_7,                            6)
+    TAGKEYS(                        XK_8,                            7)
+    TAGKEYS(                        XK_9,                            8)
+    TAGKEYS(                        XK_0,                            9)
+    TAGKEYS(                        XK_minus,                        10)
+    TAGKEYS(                        XK_equal,                        11)
     //{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
