@@ -2,7 +2,7 @@
 
 # softwhere
 - [dwm](https://dwm.suckless.org/)
-- [cmus](https://github.com/cmus/cmus)
+- [moc](http://moc.daper.net/)
 - [mpv](https://github.com/mpv-player/mpv)
 - [sxiv](https://github.com/muennich/sxiv)
 - [dmenu](https://tools.suckless.org/dmenu/)
