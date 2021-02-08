@@ -69,5 +69,5 @@ static const struct arg args[] = {
     { battery_remaining,  "%s ",   "BAT0" },
 #endif
     { run_command,        "%s ",   "[ \"$(pulsemixer --get-mute)\" = '0' ] &&  pulsemixer --get-volume | awk '{print $1\"%\"}' || echo mute" },
-	{ datetime,           "%s",    "%D %T" },
+    { run_command,        "%s",    "echo 'NY:' $(env TZ=America/New_York date '+%T') 'PL:'  $(date '+%T') 'JP:' $(env TZ=Asia/Tokyo date '+%T')" },
 };
