@@ -36,7 +36,7 @@ static const Rule rules[] = {
      *    WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    { "Gimp",     NULL,       NULL,       0,            1,           -1 },
+    { "Gimp",     NULL,       NULL,       0,            0,           -1 },
 };
 
 /* layout(s) */
@@ -463,8 +463,6 @@ static Key keys[] = {
     TAGKEYS(                        XK_8,                            7)
     TAGKEYS(                        XK_9,                            8)
     TAGKEYS(                        XK_0,                            9)
-    TAGKEYS(                        XK_minus,                        10)
-    TAGKEYS(                        XK_equal,                        11)
     //{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
