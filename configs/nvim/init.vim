@@ -1,26 +1,42 @@
 call plug#begin('~/.local/vim/plugged')
 "    Plug 'dense-analysis/ale'
+    Plug 'mattn/emmet-vim'
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'sheerun/vim-polyglot'
+    Plug 'pest-parser/pest.vim'
     Plug 'terryma/vim-multiple-cursors'
+    Plug 'frazrepo/vim-rainbow'
+    Plug 'jreybert/vimagit'
+    Plug 'mcchrish/nnn.vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
 
+
+autocmd BufReadPost *.roku set filetype=roku
+autocmd BufReadPost *.next set filetype=next
+autocmd BufReadPost *.asm set filetype=nasm
+
+"match ErrorMsg '\%>80v.\+'
 "set listchars=eol:¬,tab:>·
 "set list
-
-set number
 set nowrap
-set undofile 
+set undofile
 set undodir=~/.local/vim/undodir
-set tabstop=4 
-set shiftwidth=4 
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set ignorecase
 set smartcase
-"set foldmethod=indent
 set laststatus=0
 
-"match ErrorMsg '\%>80v.\+'
+let g:nnn#set_default_mappings = 0
+nnoremap <Tab> :NnnPicker %:p:h<CR>
+let g:nnn#layout = { 'left': '~20%' }
+let g:nnn#action = {
+      \ '<c-t>': 'tab split',
+      \ '<c-x>': 'split',
+      \ '<c-v>': 'vsplit' }
 
 command W w
 command Wq wq
@@ -36,15 +52,21 @@ nnoremap <C-j>      <C-W><C-J>
 nnoremap <C-k>      <C-W><C-K>
 nnoremap <C-l>      <C-W><C-L>
 
-" let g:ale_completion_enabled = 1
-" let g:ale_fix_on_save = 1
-" let b:ale_linters = {
-" \    'c': ['gcc']
-" \}
-" let g:ale_fixers = {
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-" \   'html': ['prettier'],
-" \}
+nnoremap <C-P>      :Files<CR>
+nnoremap <C-B>      :Buffers<CR>
+nnoremap <C-S>      :Rg<CR>
+
+let g:fzf_preview_window = 'right:50%'
+
+let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
+let b:ale_linters = {
+\    'c': ['gcc']
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'html': ['prettier'],
+\}
 
 set fillchars+=vert:│
 
