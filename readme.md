@@ -1,4 +1,4 @@
-# Rose configs (My yet anther configuration)
+# Rose configs (My yet anther configuration(OLD Archive))
 
 # softwhere
 - [dwm](https://dwm.suckless.org/)
